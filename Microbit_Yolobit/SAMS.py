@@ -66,6 +66,18 @@ def on_event_condition_callback_J_g_a_U_d():
 
 event_manager.add_condition_event(lambda:((aiot_dht20.dht20_temperature()) <= temperature_threshold), on_event_condition_callback_J_g_a_U_d)
 
+def on_event_condition_callback_A_c_Z_w_w():
+  global temperatue, temperature_threshold, humidity, soil_threshold, light, soil_moisture, server_temp_threshold, server_soil_threshold
+  pin14.write_analog(round(translate(70, 0, 100, 0, 1023)))
+
+event_manager.add_condition_event(lambda:((round(translate((pin0.read_analog()), 0, 4095, 0, 100))) < soil_threshold), on_event_condition_callback_A_c_Z_w_w)
+
+def on_event_condition_callback_l_E_I_R_u():
+  global temperatue, temperature_threshold, humidity, soil_threshold, light, soil_moisture, server_temp_threshold, server_soil_threshold
+  pin14.write_analog(round(translate(0, 0, 100, 0, 1023)))
+
+event_manager.add_condition_event(lambda:((round(translate((pin0.read_analog()), 0, 4095, 0, 100))) >= soil_threshold), on_event_condition_callback_l_E_I_R_u)
+
 if True:
   aiot_lcd1602.clear()
   aiot_lcd1602.move_to(0, 0)
@@ -83,8 +95,6 @@ while True:
   mqtt.check_message()
   event_manager.run()
   display.scroll(temperature_threshold)
+  display.scroll(soil_threshold)
   time.sleep_ms(1000)
   time.sleep_ms(10)
-
-
-aiot_dht20.dht20_temperature()
