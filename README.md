@@ -20,7 +20,6 @@ Dự án **Smart Agriculture IoT System** sử dụng cảm biến môi trườn
 ### 🔹 Tự động hóa tưới nước
 - Kích hoạt tưới khi độ ẩm đất thấp.
 - Tắt tưới khi đủ nước.
-- Lên lịch tưới tự động.
 - Dự đoán lượng nước cần tưới dựa trên AI và dữ liệu môi trường.
 
 ### 🔹 Phân loại trái cây
@@ -29,24 +28,22 @@ Dự án **Smart Agriculture IoT System** sử dụng cảm biến môi trườn
 ## 🔧 Công nghệ sử dụng
 
 ### 📡 Phần cứng
-- **ESP32/STM32/Raspberry Pi**: Vi điều khiển trung tâm.
-- **Cảm biến DHT11/DHT22**: Đo nhiệt độ và độ ẩm không khí.
+- **Yolobit**: Vi điều khiển.
+- **Cảm biến DHT20**: Đo nhiệt độ và độ ẩm không khí.
 - **Cảm biến độ ẩm đất**: Xác định độ ẩm đất.
 - **Cảm biến ánh sáng LDR**: Đo cường độ ánh sáng.
-- **Camera AI (ESP-EYE, Raspberry Pi Camera, OpenCV)**: Phát hiện sâu bệnh và phân loại trái cây.
+- **Quạt mini**: Điều chỉnh nhiệt độ.
+- **Máy bơm mini**: Bơm nước cho cây.
+- **Màn hình LCD 16x2**: Hiện thị thông tin về môi trường.
 - **Relay Module**: Điều khiển bơm nước tự động.
 
 ### 💻 Phần mềm
-- **ESP-IDF/Arduino/STM32Cube**: Lập trình vi điều khiển.
-- **MQTT/HTTP API**: Giao tiếp với server.
-- **Firebase/InfluxDB**: Lưu trữ dữ liệu thời gian thực.
-- **Node-RED**: Hiển thị dashboard giám sát.
-- **Python + OpenCV + TensorFlow**: AI phát hiện sâu bệnh và phân loại trái cây.
-- **Flutter/React Native**: Ứng dụng di động giám sát.
+- **Ohstem app**: Lập trình yolobit.
+- **Pycharm**: Hiện thực gateway (module gateway được skip).
 
 ## 🏗 Kiến trúc hệ thống
 1. **Thiết bị IoT (ESP32/STM32/Raspberry Pi)** thu thập dữ liệu từ cảm biến.
-2. **Dữ liệu gửi lên server thông qua MQTT/HTTP API**.
+2. **Dữ liệu gửi lên server Adafruit IO thông qua MQTT API**.
 3. **Dữ liệu được xử lý, lưu trữ và hiển thị trên dashboard/ứng dụng di động**.
 4. **AI phân tích và đưa ra cảnh báo/tự động kích hoạt tưới nước**.
 
@@ -54,5 +51,14 @@ Dự án **Smart Agriculture IoT System** sử dụng cảm biến môi trườn
 
 ### 1️⃣ Clone repository
 ```sh
-git clone https://github.com/your-username/smart-agriculture-iot.git
-cd smart-agriculture-iot
+https://github.com/nguyenthinhthanh/Smart-Agricultural-Monitoring-System
+```
+### 2️⃣ Ohstem app
+```sh
+https://app.ohstem.vn/#!/share/yolobit/2tWKWuEtS6A4ePYARPZkQodFMEa  
+```
+## 🤝 Đóng góp
+Bạn có ý tưởng cải thiện trò chơi? Hãy mở Pull Request hoặc Issue trên GitHub!
+
+## 📄 Giấy phép
+Null.
