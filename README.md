@@ -9,7 +9,6 @@ Hệ thống IoT thông minh cho nông nghiệp giúp giám sát môi trường,
   - [Giám sát môi trường](#-giám-sát-môi-trường)
   - [Phát hiện và cảnh báo bất thường](#-phát-hiện-và-cảnh-báo-bất-thường)
   - [Tự động hóa tưới nước](#-tự-động-hóa-tưới-nước)
-  - [Phân loại trái cây](#-phân-loại-trái-cây)
 - [Công nghệ sử dụng](#công-nghệ-sử-dụng)
   - [Phần cứng](#phần-cứng)
   - [Phần mềm](#phần-mềm)
