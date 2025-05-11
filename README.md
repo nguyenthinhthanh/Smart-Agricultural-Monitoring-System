@@ -39,9 +39,6 @@ Dự án **Smart Agriculture IoT System** sử dụng cảm biến môi trườn
 - Tắt tưới khi đủ nước.
 - Dự đoán lượng nước cần tưới dựa trên AI và dữ liệu môi trường.
 
-### 🔹 Phân loại trái cây
-- Xác định trạng thái chín hoặc sống của trái cây bằng AI.
-
 ## Công nghệ sử dụng
 
 ### Phần cứng
